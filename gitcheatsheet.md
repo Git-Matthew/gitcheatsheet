@@ -12,7 +12,7 @@ Git repositories can be set up locally or remotely using websites such as GitHub
 
 **git commit** Confirms changes to files and uploads them as a new version.
 
-	**-m** "text" Adds a comment to the commit.
+	-m "text" Adds a comment to the commit.
 
 **git clone [url]** Copies an existing repository ready for editing instead of starting from scratch.
 
@@ -28,7 +28,7 @@ Origin refers to the original repository where everything started being worked o
 
 **git status** Shows which files were modified, removed or added to the current commit.
 
-	**--short** & **-s** Show simpler and thus shorter stats.
+	--short & -s Show simpler and thus shorter stats.
 
 **echo "Project Name"** Echo acts as a show text in screen but ">> file name" moves the text inside the file.
 
@@ -48,31 +48,31 @@ Origin refers to the original repository where everything started being worked o
 
 **git diff** Shows the differences between versions of the current branch and repository.
 
-	**--cached** & **--staged** Shows what has been prepared until now.
+	--cached & --staged Shows what has been prepared until now.
 
 ## Confirmation History:
 
 **git log** Shows a log of everything that has been done and each version.
 
-	**-p** Shows the differences in each confirmation.
+	-p Shows the differences in each confirmation.
 
-	**-2** Only shows the last two.
+	-2 Only shows the last two.
 
-	**--stat** Shows stats from each confirmation.
+	--stat Shows stats from each confirmation.
 
-	**--pretty** Gives it a style from the list that can be accessed using "--pretty=format"
+	--pretty Gives it a style from the list that can be accessed using "--pretty=format"
 
-	**--after** & **--before** Limits the timeframe of the confirmations showned.
+	--after & --before Limits the timeframe of the confirmations showned.
 
-	**--author** Shows only the ones from that author.
+	--author Shows only the ones from that author.
 
 ## Undo Stuff:
 
 **git commit** Confirms changes to files and uploads them as a new version.
 
-	**--amend** Does the confirmation again if you forgot to add a file.
+	--amend Does the confirmation again if you forgot to add a file.
 
-**git add ** Adds every file.
+**git add** Adds every file.
 
 **git reset HEAD <file>** Undoes the preparation.
 
@@ -82,9 +82,9 @@ Origin refers to the original repository where everything started being worked o
 
 **git remote** Shows the already configured remote repositories already configured.
 
-	**origin** Default name git gives to the server of the cloned repository.
+	origin Default name git gives to the server of the cloned repository.
 
-	**-v** Shows the urls that git has associated with the name.
+	-v Shows the urls that git has associated with the name.
 
 **git remote add [name] [url]** Adds a new remote and gives it a name.
 
@@ -104,15 +104,15 @@ Tags are like pointers to a specific commit.
 
 **git tag [tag]** Shows available tags. Creates and names a tag.
 
-	**-a** Creates an annotated tag.
+	-a Creates an annotated tag.
 
-	**-m** Especifies a message.
+	-m Especifies a message.
 
 **git show** Information related to the commit with that tag.
 
 **git push [location] [tag]** Shares tags.
 
-	**--tags** Allows for sending multiple tags.
+	--tags Allows for sending multiple tags.
 
 **git checkout [tag]** Gets a tag out.
 
