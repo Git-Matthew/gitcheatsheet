@@ -123,3 +123,111 @@ Tags are like pointers to a specific commit.
 Aliales create shorcuts to frequently accessed git commands.
 
 They are used to optimize the speed and efficiency of a project.
+
+# Git Cheat Sheet: Chapter 3
+
+## Branches In A Nutshell:
+
+Branching means you move from the main line and continue working without messing with that main line.
+
+Git stores data as "snapshots".
+
+The default branch name in Git is master.
+
+As you start making commits, you’re given a master branch that points to the last commit you made. Every time you commit, the master branch pointer moves forward automatically.
+
+**git branch [name]** Creates a new pointer to the same commit you’re currently on.
+
+Git keeps a special pointer called HEAD that allows it to know in which branch you are.
+
+**git log --decorate** Shows where the branch pointers are pointing.
+
+	Reminder that git log doesn’t show all the branches all the time.
+
+**git checkout [branch-to-switch-to]** Switches to an existing branch.
+
+**git log --oneline --decorate --graph --all** Prints out the history of commits, showing where branch pointers are and how their history has diverged.
+
+**git checkout -b [new-branch-name]** Creaters a new branch and switches to it at the same time.
+
+## Basic Branching and Merging:
+
+To merge branches you have to do is check out the branch you wish to merge into and then run the git merge command.
+
+**git merge [branch]** Merges the branch with the one you checked out.
+
+Note: If you changed the same part of the same file differently in the two branches you’re merging, Git won’t be able to merge them cleanly.
+
+**git status** Shows which files are unmerged at any point after a merge conflict.
+
+**git mergetool** Boots up a graphical tool to resolve issues with merging.
+
+**git commit** To finalize the merge commit.
+
+## Branch Management:
+
+**git branch** If its run with no arguments, you get a simple listing of your current branches.
+
+	-v Shows the last commit on each branch.
+
+	--merged & --no-merged options can filter this list to branches that you have or have not yet merged into the branch you’re currently on.
+
+	-d Used for deleting branches without the * suffix.
+
+## Branching Workflows:
+
+Git uses a simple three-way merge.
+
+You can have several branches that are always open and that you use for different stages of your development cycle; you can merge regularly from some of them into others.
+
+A topic branch is a short-lived branch that you create and use for a single particular feature or related work.
+
+When you’re branching and merging, everything is being done only in your Git repository
+
+## Remote Branches:
+
+Remote references are references (pointers) in your remote repositories, including branches, tags, and so on.
+
+**git ls-remote <remote>** Full list of remote references explicitly.
+
+**git remote show <remote>** Remote branches as well as more information.
+
+Remote-tracking branch names take the form <remote>/<branch>
+
+**git fetch <remote>** To synchronize your work with a given remote.
+
+	Fetch updates your remote-tracking branches.
+
+**git remote add** Add a new remote reference to the project you’re currently working on.
+
+**git push <remote> <branch>** Pushes up the remote branch.
+
+**git config --global credential.helper cache** Set up a “credential cache" to avoid typing passwords everytime a push is made.
+
+**git checkout --track** Tracks branches.
+
+	When you are tracking a branch you can reference its upstream branch using: @{upstream}
+
+**git pull** Is essentially a git fetch immediately followed by a git merge in most cases.
+
+	--delete Is used to delete remote branches.
+
+	Basically all this does is remove the pointer from the server.
+
+## Rebasing Branches:
+
+**git rebase** Takes all the changes that were committed on one branch and replay them on a different branch.
+
+You can also have your rebase replay on something other than the rebase target branch.
+
+	--onto Takes the changes on client that aren’t on server and replay them on your master branch.
+
+**git rebase <basebranch> <topicbranch>** Rebases the server branch onto the master branch without having to check it out first.
+
+Note: Do not rebase commits that exist outside your repository and that people may have based work on.
+
+**git push --force** Overwrite the history on the server.
+
+If you are using git pull and want to make --rebase the default, you can set the pull.rebase config value with something like git config --global pull.rebase true.
+
+In general it's best rebase local changes you’ve made but haven’t shared yet before you push them in order to clean up your story, but never rebase anything you’ve pushed somewhere.
