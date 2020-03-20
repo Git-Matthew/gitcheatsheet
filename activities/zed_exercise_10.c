@@ -35,3 +35,17 @@ int main(int argc, char *argv[])
 		CODE;
 	}
 	*/
+
+/////////////////////////////////////EXTRA CREDIT///////////////////////////////////
+/*
+
+- In the first part you could declare anything which you want setup at the beggining
+then a condition that has to be met, and finally an action that happens after each loop.
+
+- Using them as commas for separate arguments and semicolons for separate sequential instructions.
+
+- It terminates it as soon as it hits the null which itself doesn't show.
+
+- It did not because it is undeclared in both cases due to ordering.
+
+*/
