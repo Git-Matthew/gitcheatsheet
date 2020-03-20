@@ -31,3 +31,17 @@ int main(int argc, char *argv[])
 	return 0;
 }
 
+/////////////////////////////////////EXTRA CREDIT///////////////////////////////////
+/*
+
+- Warning: "Integer overflow in expression" [-Woverflow].
+
+- Prints out negative numbers.
+
+- The max range of unsigned long is 4,294,967,295 (2^32 - 1).
+
+- Extended size variables that won't store negative numbers.
+
+- Because in c char is a numeric type.
+
+*/

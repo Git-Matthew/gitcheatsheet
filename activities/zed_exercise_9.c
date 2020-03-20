@@ -4,7 +4,6 @@ int main(int argc, char *argv[])
 {
 	int numbers[4] = {0};
 	char name[4] = {'a'};
-
 	// first, print them out raw
 	// This is just trying to print them without setting them up beforehand.
 	// I didn't have to give all 4 elements of the arrays to initialize them.
@@ -53,3 +52,23 @@ int main(int argc, char *argv[])
 	// Note: printf thinks that the name is just a string. This is because to the C
 	// language there's no difference between a string and an array of characters.
 }
+
+/////////////////////////////////////EXTRA CREDIT///////////////////////////////////
+/*
+
+- None, just got long negative numbers as a result.
+
+- It printed a "?" symbol instead of the number 
+as if it didn't understand which character it was.
+
+- 2 more per each if you print the char as int and viceversa
+plus all of them at the same time in array form.
+
+- Yes, either because char is a numeric type 
+or using atoi on the array of chars.
+
+- I got a warning: incompatible integer to pointer conversion
+initializing 'char *' with an expression of type 'int'
+[-Wint-conversion]
+
+*/
