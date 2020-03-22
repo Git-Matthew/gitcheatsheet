@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// In C, there's not really a "boolean" type, and instead any integer that's 0 is "false" and otherwise it's "true"
+// C strings are character arrays.
 int main(int argc, char *argv[])
 {
 
@@ -35,3 +37,31 @@ int main(int argc, char *argv[])
 	}
 	*/
 
+/////////////////////////////////////EXTRA CREDIT///////////////////////////////////
+/*
+
+- It just prints them backwards:
+	int i = 4;
+	while(i > 0)
+	{
+		printf("arg %d: %s\n", i, argv[i]);
+		i--;
+	}
+
+- Just comment the "//Let's make our own array of strings" part
+and add this instead:
+	i = 0;
+	char *states[4];
+	while (i < argc)
+	{
+		if (i < 4)
+		{
+			states[i] = argv[i];
+		}
+		i++;
+	}
+
+- Aparently not because for that the "strcpy" function is needed
+right now its probably just a pointer to the arg string not a copy.
+
+*/

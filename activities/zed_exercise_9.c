@@ -52,13 +52,12 @@ int main(int argc, char *argv[])
 	// Note: printf thinks that the name is just a string. This is because to the C
 	// language there's no difference between a string and an array of characters.
 }
-
 /////////////////////////////////////EXTRA CREDIT///////////////////////////////////
 /*
 
 - None, just got long negative numbers as a result.
 
-- It printed a "?" symbol instead of the number 
+- It printed a "?" symbol instead of the number
 as if it didn't understand which character it was.
 
 - 2 more per each if you print the char as int and viceversa

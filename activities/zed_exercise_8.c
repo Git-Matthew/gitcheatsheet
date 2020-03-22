@@ -37,7 +37,6 @@ int main(int argc, char *argv[])
 	printf("name=\"%s\" and full_name=\"%s\"\n", name, full_name);
 	return 0;
 }
-
 /////////////////////////////////////EXTRA CREDIT///////////////////////////////////
 /*
 

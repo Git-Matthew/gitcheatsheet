@@ -30,7 +30,6 @@ int main(int argc, char *argv[])
 	printf("Which means you should care %d%%.\n", care_percentage);
 	return 0;
 }
-
 /////////////////////////////////////EXTRA CREDIT///////////////////////////////////
 /*
 
